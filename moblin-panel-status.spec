@@ -1,11 +1,14 @@
+# moblin guys didn't really create a tag for their 2.1 release
+%define checkout 0b060769b04b8a5dff3692a3026534dafca2a0b5
+
 Name: moblin-panel-status
 Summary: Status panel for Moblin
 Group: Graphical desktop/Other 
-Version: 0.0.7
+Version: 0.0.10
 License: LGPL 2.1
 URL: http://www.moblin.org
-Release: %mkrel 2
-Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
+Release: %mkrel 1
+Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{checkout}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: intltool
@@ -21,7 +24,7 @@ BuildRequires: nbtk-devel
 Moblin status panel for Moblin
 
 %prep
-%setup -q 
+%setup -q -n %{name}-%{checkout}
 
 %build
 NOCONFIGURE=nil ./autogen.sh
