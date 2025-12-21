@@ -11,6 +11,11 @@ Release: %mkrel 2
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{checkout}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: intltool
 BuildRequires: gettext
 BuildRequires: gnome-common
